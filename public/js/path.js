@@ -4,7 +4,21 @@ var canvasImage = document.querySelector('#canvasImage');
 
 
 function drawGrid(context, color, stepx, stepy){
+  context.lineWidth = 0.5;  // 在像素边界绘制线段会占据两个像素，因此只给0.5px
+  context.strokeStyle=color;
+  for(var i = stepx + 0.5; i < context.canvas.width; i+= stepx){
+    context.beginPath();
+    context.moveTo(i, 0);
+    context.lineTo(i, context.canvas.height);
+    context.stroke();
+  }
 
+  for(var i = stepx + 0.5; i < context.canvas.height; i+= stepy){
+    context.beginPath();
+    context.moveTo(0, i);
+    context.lineTo(context.canvas.width, i);
+    context.stroke();
+  }
 }
  
 drawGrid(context, 'blue', 10, 10);
