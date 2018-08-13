@@ -27,3 +27,6 @@
 - 当使用arc向子路径中增加子路径时， 需将上一条子路径的终点和所画圆弧相连
 - rect() 方法总是按照顺时针创建矩形， 不能控制方向
 - moveTO 和lineTo
+- 线段端点的绘制， lineCap: butt(默认)|round|square
+- 线段连接点， lineJoin: round|bevel|miter（默认） miterLimit 可以控制连接点的夹角
+- 
