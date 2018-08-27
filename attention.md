@@ -29,4 +29,10 @@
 - moveTO 和lineTo
 - 线段端点的绘制， lineCap: butt(默认)|round|square
 - 线段连接点， lineJoin: round|bevel|miter（默认） miterLimit 可以控制连接点的夹角
+
+
+- measureText是根据当前的字型来计算来计算字符串宽度的。且measureText返回的值不一定精确。
+- 文本居中-- textAlign和textBaseline
+- 在圆弧周围绘制文本 1. 计算圆弧周围每个字符的绘制坐标， 2，将坐标系平移到绘制地址， 3. 将坐标系选择PI/2 - angle 度 4.填充字符或描边
+- 要想嚓除文本， 必须替换掉整个canvas
 - 
