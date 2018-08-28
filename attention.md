@@ -39,3 +39,13 @@
 - 在圆弧周围绘制文本 1. 计算圆弧周围每个字符的绘制坐标， 2，将坐标系平移到绘制地址， 3. 将坐标系选择PI/2 - angle 度 4.填充字符或描边
 - 要想嚓除文本， 必须替换掉整个canvas
 - 
+
+
+- drawImage 在图像未被加载完前不会绘制，一般在onload里执行；图像绘制的效果受制于阴影， 剪辑区域和图像合成
+- 三种参数传递形式
+- drawImage(source, dx, dy) 
+- drawImage(source, dx, dy, dw, dh)  // 会根据目标区域进行缩放
+- drawImage(source, sx, sy, sw, sh, dx, dy, dw, dh)
+- 可以在canvas范围外绘制图像，浏览器会忽略canvas范围外那部分图像，但可以通过平移canvas的坐标系来让背景中的一部分显示出来
+- 离屏canvas——通常用来存放临时的图像信息， 使用putImageData和脏矩形技术对图像局部渲染：由于getImageData十分消耗性能，所以在检测鼠标按下时就调用一次getImnageData，得到canvas全部形象，在鼠标移动时，则调用putImageData将矩形框选择的那一块复制到canvas。
+- putImageData(image, dx,dy,dirtyx, dirtyy, dirtyWidth, dirtyHeight)， 且putImage不受全局属性影响
