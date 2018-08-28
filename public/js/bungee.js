@@ -128,3 +128,21 @@ resetButton.onclick = function(e){
 }
 
 image.src = "../public/images/crate.jpg";
+
+
+function drawRubberbandShape(loc){
+    var angle, radius;
+
+    if(mouseDown.y === loc.y){
+        // 水平线
+        radius = Math.abs(loc.x - mouseDown.x)
+    }else{
+        angle = Math.atan(rubberbandRect.height / rubberbandRect.width);
+        radius = rubberbandRect.height / Math.sin(angle);
+    }
+
+    context.beginPath();
+    context.arc(mouseDown.x, mouseDown.y, radius, Math.PI / 180 * 0, Math.PI / 180 * 360, false);
+    context.stroke();
+}
+
