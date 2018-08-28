@@ -27,3 +27,6 @@
 - 当使用arc向子路径中增加子路径时， 需将上一条子路径的终点和所画圆弧相连
 - rect() 方法总是按照顺时针创建矩形， 不能控制方向
 - moveTO 和lineTo
+- quadraticCurveTo 贝塞尔曲线 params:cpx, cpy, x, y   曲线的控制点和曲线的锚点
+- bezierCurzeTo
+- pointInPath
