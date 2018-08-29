@@ -49,3 +49,14 @@
 - 可以在canvas范围外绘制图像，浏览器会忽略canvas范围外那部分图像，但可以通过平移canvas的坐标系来让背景中的一部分显示出来
 - 离屏canvas——通常用来存放临时的图像信息， 使用putImageData和脏矩形技术对图像局部渲染：由于getImageData十分消耗性能，所以在检测鼠标按下时就调用一次getImnageData，得到canvas全部形象，在鼠标移动时，则调用putImageData将矩形框选择的那一块复制到canvas。
 - putImageData(image, dx,dy,dirtyx, dirtyy, dirtyWidth, dirtyHeight)， 且putImage不受全局属性影响
+
+
+- 背景移动——通过translate 坐标系来实现
+- 视差动画——对补贴的图像，以不通的速度移动， 可以产生3d视差动画
+
+### 动画制作指导原则
+- 使用requestAnimationFrame
+- 业务逻辑的更新和动画的绘制区分开
+- 使用“基于时间的运动”来协调动画的播放速度
+- 用剪切区域或图像复制技术将复杂的背景图像恢复到屏幕上
+- 可以使用离屏canvas来提升绘制速度
