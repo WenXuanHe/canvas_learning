@@ -1,3 +1,4 @@
+// 渐进线
 export const createLinearGradient = (point1, point2, colors=[]) => {
     if(typeof point1 !== 'object' || point1 == null) throw new Error("point1 must be a object");
     if(typeof point2 !== 'object' || point2 == null) throw new Error("point2 must be a object");

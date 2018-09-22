@@ -1,3 +1,4 @@
+// 画虚线
 let moveToFunction = CanvasRenderingContext2D.prototype.moveTo;
 CanvasRenderingContext2D.prototype.moveTo = function(context, x, y){
   moveToFunction.apply(context, [x, y])

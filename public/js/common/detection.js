@@ -1,3 +1,4 @@
+// 检测碰撞
 export default{
     // 边界检测判断法
     ballWillHitLedge (ledge){

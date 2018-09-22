@@ -1,3 +1,4 @@
+// 检测是否碰撞
 class Projection{
     constructor(min, max){
         this.min = min;
