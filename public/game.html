@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>    
+    <style>
+    body{
+        background: #dddddd;
+    }
+    canvas{
+        border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="operate_area">
+        <input type="text" id="start_top">
+        <input type="text" id="start_left">
+        <input type="text" id="end_top">
+        <input type="text" id="end_left">
+        <select name="" id="operate">
+            <option value="opacity"></option>
+            <option value="backgroundColor"></option>
+            <option value="borderRadius"></option>
+            <option value="rotate"></option>
+            <option value="scale"></option>
+            <option value="translateX"></option>
+            <option value="loop"></option>
+        </select>
+
+        <select name="" id="trigger">
+            <option value="pageEnter"></option>
+            <option value="click"></option>
+            <option value="pageLeave"></option>
+            <option value="hover"></option>
+        </select>
+    </div>
+    <canvas id="canvas" width="400" height="600">
+        canvas not supported
+    </canvas>
+    
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
+    <script src='./js/game/imagePainter.js'></script>
+    <script src='./js/game/sprite.js'></script>
+    <script src='./js/game/index.js'></script>
+    <script src='./js/game/swiper.js'></script>
+</body>
+</html>
